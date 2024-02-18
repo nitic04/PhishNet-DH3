@@ -5,6 +5,7 @@ export default function FirstTab() {
   const [file, setFile] = useState({
     selectedFile: null
   });
+  
 
   const [dragActive, setDragActive] = useState(false);
   const [msg, setMsg] = useState("");
@@ -52,11 +53,29 @@ export default function FirstTab() {
     }
   };
 
-  const chooseFile = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      checkSize(e);
-      // checkFileType(e);
-    }
+  const chooseFile = async (e) => {
+    const selectedFile = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = async (event) => {
+      const fileContent = event.target.result;
+      try {
+        const response = await fetch('http://localhost:5000/upload', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ emailContent: fileContent })
+        });
+        const data = await response.json();
+        setMsg(data.result);
+      } catch (error) {
+        console.error('Error uploading file: ', error);
+        setMsg("Error uploading file");
+      }
+    };
+
+    reader.readAsText(selectedFile);
   };
 
   const handleDrag = (e) => {

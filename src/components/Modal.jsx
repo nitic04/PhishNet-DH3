@@ -11,10 +11,6 @@ export default function Modal() {
         setActiveTab("upload");
     };
 
-    const handleTab2 = () => {
-        setActiveTab("sign");
-    };
-
     const handleFirstTabOutput = (output) => {
         setFirstTabOutput(output);
         setActiveTab("upload");
