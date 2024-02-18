@@ -4,14 +4,17 @@ import Logo from '../assets/phishnetlogo.gif';
 
 const Homepage = () => {
     return (
-        <div>           
+        <div>          
             <center>
                 <img src={Logo} alt="Phishnet Logo" style={{ width: '400px', height: 'auto', borderRadius: '50%' }} />
                 <br></br>
                 <p>Welcome to Phishnet! This is a community-driven platform for sharing and discovering phishing URLs.</p>
                 <br></br>
                 <NavLink to="/signup">
-                    <button>Sign Up</button> </NavLink>
+                    <button>Sign Up</button> </NavLink> 
+                    <br></br><br></br>OR<br></br><br></br>
+                <NavLink to="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <button>Sign In</button> </NavLink>
             </center>
             <br></br>
         </div> 

@@ -1,7 +1,8 @@
 /* FILEPATH: /phishnet/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Reset default styles */
-body, h1, p {
+body, h1, h2, p {
   padding: 50;
   margin: 1cm
 }
@@ -11,6 +12,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #111010;
   color: #fff;
+  font-size: 15px;
 }
 
 /* Add styles for header */
@@ -44,6 +46,7 @@ button {
   cursor: pointer;
   border-radius: 8px;
   font-family: 'Courier New', Courier, monospace;
+  transition-duration: 0.2s;
 }
 
 button:hover {
@@ -52,3 +55,99 @@ button:hover {
 }
 
 
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #033F8F;
+  padding: 20px;
+  width: 900px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  float: left;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 65%;
+  padding: 10px;
+}
+
+.column2 {
+  float: left;
+  width: 35%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }}
