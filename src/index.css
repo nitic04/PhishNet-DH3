@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* FILEPATH: /phishnet/src/index.css */
+
+/* Reset default styles */
+body, h1, p {
+  padding: 50;
+  margin: 1cm
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Set font and background color */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #111010;
+  color: #fff;
 }
+
+/* Add styles for header */
+header {
+  background-color: #111010;
+  color: #fff;
+  padding: 100px;
+}
+
+/* Add styles for main content */
+main {
+  margin: 20px;
+}
+
+/* Add styles for links */
+a {
+  color: #83bfff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Add styles for buttons */
+button {
+  border: 2px solid #033F8F;
+  background-color: #fff;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+  background-color: #033F8F;
+  color: #fff;
+}
+
+
