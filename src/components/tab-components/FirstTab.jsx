@@ -19,10 +19,10 @@ export default function FirstTab() {
     }
 
     switch (extension) {
-      case "jpg":
-      case "jpeg":
-      case "png":
-      case "pdf":
+      case "eml":
+      // case "jpeg":
+      // case "png":
+      // case "pdf":
         eventType !== "drop"
           ? setFile({ selectedFile: e.target.files[0] })
           : setFile({ selectedFile: e.dataTransfer.files[0] });

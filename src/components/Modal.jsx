@@ -29,14 +29,6 @@ export default function Modal() {
                 </p>
 
                 <div className="Tabs">
-                    <ul className="nav">
-                        <li
-                            className={activeTab === "upload" ? "active" : ""}
-                            onClick={handleTab1}
-                        >
-                            Upload photo
-                        </li>
-                    </ul>
                     <div className="outlet">
                         {activeTab === "upload" ? <FirstTab onOutput={handleFirstTabOutput} /> : null}
                     </div>
