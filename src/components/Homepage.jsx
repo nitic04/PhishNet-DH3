@@ -10,7 +10,7 @@ const Homepage = () => {
                 <br></br>
                 <p>Welcome to Phishnet! This is a community-driven platform for sharing and discovering phishing URLs.</p>
                 <br></br>
-                <NavLink to="/signup">
+                <NavLink to="/dashboard">
                     <button>Get Phishing!</button> </NavLink> 
             </center>
             <br></br>
